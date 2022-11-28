@@ -1,0 +1,47 @@
+<nav>
+    <div class="tudo">
+        <div class="container">
+            <a href="/">Página Principal</a>
+            <a href="/produtos">Produtos</a>
+            <a href="/contato">Entre em contato</a>
+            <a href="/sobre">Sobre nós</a>
+        </div>
+        <div class="container">
+            {% if not user.is_anonymous %}
+                <ul class="linksAdm">
+                    <li><a href="/admin/auth/user/">Usuários</a></li>
+                    <li><a href="/admin/produtos/produto/">Produtos</a></li>
+                    <li><a href="/admin/produtos/categoria/">Categoria</a></li>
+                    <li><a href="/admin/pedidos/pedido/">Pedidos</a></li>
+                </ul>
+            {% endif %}
+            <div class="teste">
+                {% if user.is_anonymous %}
+                    <p class="login-desc">Crie sua conta ou faça login {{ user.get_name }}</p>
+                    <div class="inputs">
+                        <a href="{% url 'login' %}" class="login">Login</a>
+                        <a href="{% url 'signup' %}" class="criar_conta">Criar conta</a>
+                    </div>
+                {% else %}
+            </div>
+        </div>
+    </div>
+            <div class="naosei">
+                <h3 class="boasVindas">Seja bem vindo(a) {{ user.username }}</h3>
+                <a href="{% url 'logout' %}">Logout</a>
+                <h3 class="username">{{ user.username }}</h3>
+            {% endif %}
+            </div>
+    <h4>{% with quantidade_itens=carrinho|length %}
+        {% if not user.is_anonymous %}
+            {% if quantidade_itens > 0 %}
+            Seu carrinho de compras:
+            <a href="{% url 'carrinho:detalhes_carrinho' %}">{{ quantidade_itens }}
+                produto{{ quantidade_itens|pluralize }} - R${{ carrinho.get_total_geral }}</a>
+            {% else %}
+            <p class="car_vazio">Seu carrinho está vazio.</p>
+            {% endif %}
+        {% endif %}
+        {% endwith %}
+    </h4>
+</nav>

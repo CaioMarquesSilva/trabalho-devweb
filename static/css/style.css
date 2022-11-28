@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*================================MAIN*/
+
+
+
+.login-desc {
+    padding-top: 15px;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Sans-Serif;
+    font-size: 60px;
+    color: #323232;
+}
+
+.subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Sans-Serif;
+    font-size: 10px;
+    color: #ce2340;
+}
+
+.usuario {
+    font-family: 'Verdana';
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(18, 43, 43);
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.boasVindas{
+    font-family: 'Verdana';
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 90vh;
+    color: blue;
+}
+
+.username{
+    font-family: 'Verdana';
+    color: black;
+}
+
+.categorias{
+    padding-top: 20px;
+}
+
+.produtos{
+    font-family: 'Verdana';
+    padding-top: 20px;
+    padding-left: 100vh;
+    color: blue;
+
+}
+
+/*================================PRODUTO*/
+
+.card-img-top{
+    width: 30vh;
+    height: 30vh;
+}
+
+.produtos__container {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto__img {
+    width: 150px;
+}
+
+.produto__card {
+    margin: 5px;
+    width: 15rem;
+    padding: 10px;
+}
+
+.sobre{
+    padding-left: 95vh;
+    padding-bottom: 10vh;
+}
+
+/*================================PEDIDOS*/
+
+.order {
+    width: 80vw;
+}
+
+.order__field {
+    width: 100%;
+}
+
+/*================================CONTATO*/
+
+.contact {
+    width: 80vw;
+}
+
+.contact__field {
+    width: 100%;
+}
+
+.tudo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linksAdm li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+a {
+    color: black;
+    border: 1px solid black;
+}
+
+.container, a{
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: Verdana;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.inputs {
+    padding-top: 15px;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.car_vazio {
+    padding-top: 8px;
+    color: red;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.username {
+    padding-top: 10px;
+}
+
+.teste {
+    display: flex;
+    justify-content: flex-end;
+}
+
+body {
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-gradiente-abstrato-branco-simples_53876-99910.jpg?w=1380&t=st=1669602030~exp=1669602630~hmac=3d6760259fbaafc613f57ea6c3409e324dcaa98d4ed89b6cbcc75e3c2b636f1e);
+
+}
+
